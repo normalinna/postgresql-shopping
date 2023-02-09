@@ -1,0 +1,73 @@
+@import '../../Constants/Styles/constants.scss';
+
+.dropdown-menu {
+    position: fixed;
+    width: 15rem;
+    height: auto;
+    background-color: $white;
+    z-index: 1000;
+    top: calc($header-height - 3.5rem);
+    right: 2rem;
+    padding: 1rem;
+    box-shadow: 0 0 2px rgba(0,0,0,0.5);
+
+    ul {
+        width: 100%;
+        padding: 0;
+        margin: 0;
+
+        .cart-item {
+            list-style-type: none;
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            font-family: 'Monseratt', sans-serif;
+            line-height: 1.6;
+            font-size: 13px;  
+            padding: 0.3rem 0;
+            align-items: center;
+            
+            .product-name {
+                font-weight: 400;
+                width: 50%;
+            }
+
+            .product-count {
+                padding: 0px 7px;
+                background-color: $grey2;
+                color: $white;
+                height: 1.2rem;
+                vertical-align: middle;
+            }
+
+            .product-price {
+                color: $black;
+                font-weight: 400;
+            }
+        }
+    }
+
+    .total {
+        display: flex;
+        justify-content: flex-end;
+        font-weight: 600;
+        font-size: 14px;
+        padding: 0.5rem;
+    }
+
+    .cart-actions {
+        width: 100%;
+        display: flex;
+        position: relative;
+        justify-content: flex-end;
+    }
+}
+
+.wrapper {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+}

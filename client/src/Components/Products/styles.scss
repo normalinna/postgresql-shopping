@@ -1,0 +1,167 @@
+@import '../../Constants/Styles/constants.scss';
+
+.products {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display: block;
+    font-family: 'Montserrat', sans-serif;
+
+    .products-list {
+        display: flex;
+        flex-direction: column;
+
+        .cursor-pointer {
+            cursor: pointer;
+        }
+        
+        .product-item {
+            width: 100%;
+            display: flex;
+            border-bottom: 1.5px lighten($grey2, 20%) solid;
+            padding: 1rem;
+            flex-wrap: wrap;
+
+            .image-wrapper {
+                min-width: 10rem;
+                padding: 0.5rem;
+                overflow: hidden;
+                height: 10rem;
+                width: 10rem;
+                border-radius: 2px;
+                display: flex;
+                justify-content: center;
+
+                @include r(768) {
+                    min-width: 8rem;
+                    height: 8rem;
+                    width: 8rem;
+
+                    @include r(570) {
+                        min-width: 100%;
+                    }
+                }
+
+                img {
+                    object-fit: cover;
+                    object-position: center;
+
+                    @include r(768) {
+                        height: 7.5rem;
+                        width: 7.5rem;
+                    }
+                }
+            }
+
+            .content {
+                min-width: 60%;
+                display: flex;
+                flex-direction: column;
+                font-family: 'Montserrat', sans-serif;
+                color: $black;
+                width: 50%;
+                margin-left: 2rem;
+
+                @include r(768) {
+                    min-width: 57%;
+
+                    @include r(730) {
+                        min-width: 45%;
+
+                        @include r(570) {
+                            margin-left: 0;
+                            margin-top: 1rem;
+                            min-width: 80%;
+                        }
+                    }
+                }
+
+                .title {
+                    font-size: 20px;
+                    line-height: 1.8;
+                    font-weight: 600;
+
+                    @include r(320) {
+                        font-size: 1rem;
+                    }
+                }
+
+                .description {
+                    font-size: 1.1rem;
+
+                    @include r(425) {
+                        font-size: 1rem;
+                    }
+                }
+            }
+
+            .price {
+                margin-left: 0;
+                width: 20%;
+                font-family: 'Montserrat', sans-serif;
+                color: $black;
+                font-size: 2rem;
+                display: flex;
+                justify-content: flex-start;
+                flex-direction: column;
+                align-items: flex-end;
+                height: 100%;
+
+                @include r(768) {
+                    font-size: 1.5rem;
+
+                    @include r(425) {
+                        margin-left: 0;
+                        margin-top: 1.5rem;
+
+                        @include r(320) {
+                            font-size: 1rem;
+                        }
+                    }
+                }
+
+                span {
+                    margin-bottom: 0.5rem;
+                }
+            }
+        }
+    }
+}
+
+.inventory {
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin-top: 3rem;
+    background-color: lighten($grey2, 30%);
+    padding: 0.5rem;
+
+    &-title {
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 600;
+        display: flex;
+        width: 100%;
+        justify-content: center;
+    }
+
+    .inventory-item {
+        display: flex;
+        justify-content: space-between;
+        font-family: 'Montserrat', sans-serif;
+        padding: 0.5rem 0;
+        border-bottom: 1.5px lighten($grey2, 20%) solid;
+        font-size: 14px;
+
+        &:last-child {
+            border-bottom: none;
+        }
+
+        .seller {
+
+            &-name {
+               font-weight: normal;    
+            }
+        }
+    }
+}

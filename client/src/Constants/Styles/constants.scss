@@ -1,0 +1,13 @@
+$header-height: 5rem;
+$page-width: 1280px;
+$blue: #086fcf;
+$grey1: rgb(77, 91, 124);
+$grey2: #999;
+$white: #ffffff;
+$black: #424242;
+
+@mixin r($width) {
+    @media only screen and (max-width: #{$width + 'px'}) {
+        @content;
+    }
+}

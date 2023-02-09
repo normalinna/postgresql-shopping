@@ -1,0 +1,11 @@
+@import '../../Constants/Styles/constants.scss';
+
+.footer {
+    width: 100%;
+    background-color: $white;
+    display: flex;
+    padding: 1rem 2rem;
+    font-family: 'Monseratt', sans-serif;
+    color: $black;
+    font-size: 16px;
+}
